@@ -1,0 +1,9 @@
+Metric,Value
+Positive examples,31.0
+Negative examples,95.0
+Total examples,126.0
+Initial PTA states,71.0
+Learned DFA states,3.0
+Training accuracy (%),100.0
+Unseen test accuracy (%),100.0
+RPNI execution time (seconds),0.00264

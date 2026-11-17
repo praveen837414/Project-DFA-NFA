@@ -1,0 +1,70 @@
+DATASET SUMMARY
+----------------
+Positive examples: 31
+Negative examples: 95
+Total examples: 126
+String  Label
+    01      1
+   001      1
+   101      1
+  0001      1
+  0101      1
+  1001      1
+  1101      1
+ 00001      1
+ 00101      1
+ 01001      1
+
+RPNI LEARNING RESULT
+--------------------
+Initial PTA states: 71
+Learned DFA states: 3
+Execution time (seconds): 0.00264
+q0: final=False, transitions={'0': 1, '1': 0}
+q1: final=False, transitions={'1': 2, '0': 1}
+q2: final=True, transitions={'0': 1, '1': 0}
+
+STRING RECOGNITION
+------------------
+'01' -> ACCEPTED
+'101' -> ACCEPTED
+'1001' -> ACCEPTED
+'1101' -> ACCEPTED
+'10' -> REJECTED
+'11' -> REJECTED
+'000' -> REJECTED
+'1010' -> REJECTED
+'11101' -> ACCEPTED
+'10000' -> REJECTED
+
+TRAINING EVALUATION
+-------------------
+Training accuracy: 100.0 %
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        95
+           1       1.00      1.00      1.00        31
+
+    accuracy                           1.00       126
+   macro avg       1.00      1.00      1.00       126
+weighted avg       1.00      1.00      1.00       126
+
+
+GENERALIZATION EVALUATION
+-------------------------
+Unseen strings: 896
+Generalization accuracy: 100.0 %
+
+FINAL PROJECT REPORT
+--------------------
+                       Metric     Value
+            Positive examples  31.00000
+            Negative examples  95.00000
+               Total examples 126.00000
+           Initial PTA states  71.00000
+           Learned DFA states   3.00000
+        Training accuracy (%) 100.00000
+     Unseen test accuracy (%) 100.00000
+RPNI execution time (seconds)   0.00264
+
+Saved training_dataset.csv and performance_report.csv
